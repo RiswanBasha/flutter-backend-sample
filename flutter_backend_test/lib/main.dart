@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:flutter_backend_test/splashscreen.dart';
+import 'package:flutter_backend_test/flutter_backend.dart';
 void main()
 {
   runApp(
