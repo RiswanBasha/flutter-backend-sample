@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Database Demo',
+      title: 'Flutter Backend Database Sample',
       theme: ThemeData.dark(),
       home: Home(),
     );
