@@ -1,7 +1,6 @@
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
-
 import 'package:firebase_database/firebase_database.dart';
 //import 'package:firebase_database/ui/firebase_animated_list.dart';
 // import 'package:firebase_core/firebase_core.dart'; not nessecary
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter Database Demo',
       theme: ThemeData.dark(),
       home: Home(),
     );
@@ -38,7 +37,7 @@ class HomeState extends State<Home> {
   void initState() {
     super.initState();
     item = Item("", "");
-    final FirebaseDatabase database = FirebaseDatabase.instance; //Rather then just writing FirebaseDatabase(), get the instance.  
+    final FirebaseDatabase database = FirebaseDatabase.instance; 
     itemRef = database.reference().child('items');
     itemRef.onChildAdded.listen(_onEntryAdded);
     itemRef.onChildChanged.listen(_onEntryChanged);
@@ -118,6 +117,7 @@ class HomeState extends State<Home> {
     );
   }
 }
+
 
 class Item {
   String key;
